@@ -18,7 +18,7 @@ body {
     color: white;
 }
 
-/* Navbar */
+/* ================= NAVBAR ================= */
 .navbar {
     position: fixed;
     width: 100%;
@@ -52,9 +52,7 @@ body {
     color: #b3b3b3;
 }
 
-/* Hero */
-
-    /* Hero */
+/* ================= HERO WITH VIDEO ================= */
 .hero {
     position: relative;
     height: 90vh;
@@ -80,29 +78,6 @@ body {
     inset: 0;
     background: linear-gradient(to top, #141414 10%, rgba(0,0,0,0.4));
     z-index: -1;
-}
-<div class="hero">
-    <video autoplay muted loop playsinline class="bg-video">
-        <source src="video/trailer.mp4" type="video/mp4">
-    </video>
-
-    <div class="overlay"></div>
-
-    <div class="hero-content">
-        <h1>Featured Movie</h1>
-        <p>Watch the latest blockbuster movies and trending shows anytime, anywhere.</p>
-        <div class="hero-buttons">
-            <button class="play-btn">▶ Play</button>
-            <button class="info-btn">More Info</button>
-        </div>
-    </div>
-</div>
-    
-.hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, #141414, transparent);
 }
 
 .hero-content {
@@ -139,7 +114,7 @@ body {
     color: white;
 }
 
-/* Rows */
+/* ================= MOVIE ROWS ================= */
 .row {
     margin: 30px 5%;
 }
@@ -171,7 +146,7 @@ body {
     transform: scale(1.08);
 }
 
-/* Footer */
+/* ================= FOOTER ================= */
 .footer {
     text-align: center;
     padding: 30px;
@@ -179,11 +154,7 @@ body {
     font-size: 14px;
 }
 
-/* ========================= */
-/* RESPONSIVE DESIGN */
-/* ========================= */
-
-/* Tablet */
+/* ================= RESPONSIVE ================= */
 @media (max-width: 992px) {
     .hero h1 {
         font-size: 2.2rem;
@@ -194,7 +165,6 @@ body {
     }
 }
 
-/* Mobile */
 @media (max-width: 600px) {
 
     .navbar {
@@ -206,7 +176,7 @@ body {
     }
 
     .nav-links {
-        display: none; /* hide menu on small screens */
+        display: none;
     }
 
     .hero {
@@ -229,12 +199,12 @@ body {
         font-size: 1.1rem;
     }
 }
-
 </style>
 </head>
 
 <body>
 
+<!-- ================= NAVBAR ================= -->
 <div class="navbar">
     <div class="logo">MovieFlix</div>
     <div class="nav-links">
@@ -245,7 +215,14 @@ body {
     </div>
 </div>
 
+<!-- ================= HERO SECTION WITH VIDEO ================= -->
 <div class="hero">
+    <video autoplay muted loop playsinline class="bg-video">
+        <source src="videos/trailer.mp4" type="video/mp4">
+    </video>
+
+    <div class="overlay"></div>
+
     <div class="hero-content">
         <h1>Featured Movie</h1>
         <p>Watch the latest blockbuster movies and trending shows anytime, anywhere.</p>
@@ -256,6 +233,7 @@ body {
     </div>
 </div>
 
+<!-- ================= MOVIE ROWS ================= -->
 <div class="row">
     <h2>Trending Now</h2>
     <div class="row-posters">
@@ -278,14 +256,10 @@ body {
     </div>
 </div>
 
+<!-- ================= FOOTER ================= -->
 <div class="footer">
     © 2026 MovieFlix. All rights reserved.
 </div>
 
 </body>
 </html>
-
-
-
-
-
