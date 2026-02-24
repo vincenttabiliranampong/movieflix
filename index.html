@@ -6,35 +6,85 @@
 <title>MovieFlix</title>
 
 <style>
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     background-color: #111;
     font-family: Arial, sans-serif;
     color: white;
 }
 
-header {
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    width: 100%;
     padding: 20px 40px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+    z-index: 100;
+}
+
+.logo {
     font-size: 28px;
     font-weight: bold;
     color: #e50914;
 }
 
+/* HERO SECTION */
+.hero {
+    height: 70vh;
+    background: url("images/hero.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+}
+
+.hero-content {
+    max-width: 500px;
+}
+
+.hero h1 {
+    font-size: 50px;
+}
+
+.hero p {
+    margin: 20px 0;
+}
+
+.hero button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #e50914;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* MOVIE SECTIONS */
 .section {
-    padding: 20px 40px;
+    padding: 40px;
 }
 
 .section h2 {
     margin-bottom: 20px;
 }
 
-.movies {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 20px;
+.row {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+}
+
+.row::-webkit-scrollbar {
+    display: none;
 }
 
 .movie {
+    min-width: 180px;
     transition: transform 0.3s;
 }
 
@@ -45,76 +95,122 @@ header {
 }
 
 .movie:hover {
-    transform: scale(1.08);
+    transform: scale(1.1);
 }
 
-.movie-title {
-    margin-top: 8px;
-    font-size: 14px;
-    text-align: center;
-}
-
-@media(max-width: 600px){
-    header {
-        font-size: 20px;
-        padding: 15px;
+/* MOBILE */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 30px;
     }
+
     .section {
-        padding: 15px;
+        padding: 20px;
+    }
+
+    .movie {
+        min-width: 140px;
     }
 }
 </style>
 </head>
 <body>
 
-<header>MovieFlix</header>
-
-<div class="section">
-<h2>The 5 Best New Movies</h2>
-
-<div class="movies">
-
-    <!-- MOVIE 1 -->
-    <div class="movie">
-        <a href="https://www.youtube.com/watch?v=YOUR_TRAILER_LINK" target="_blank">
-            <img src="images/heart-of-stone.jpg" alt="Heart of Stone">
-        </a>
-        <div class="movie-title">Heart of Stone</div>
-    </div>
-
-    <!-- MOVIE 2 -->
-    <div class="movie">
-        <a href="https://www.youtube.com/watch?v=YOUR_TRAILER_LINK" target="_blank">
-            <img src="images/bat-mitzvah.jpg" alt="Bat Mitzvah">
-        </a>
-        <div class="movie-title">You Are So Not Invited To My Bat Mitzvah</div>
-    </div>
-
-    <!-- MOVIE 3 -->
-    <div class="movie">
-        <a href="https://www.youtube.com/watch?v=YOUR_TRAILER_LINK" target="_blank">
-            <img src="images/living.jpg" alt="Living">
-        </a>
-        <div class="movie-title">Living</div>
-    </div>
-
-    <!-- MOVIE 4 -->
-    <div class="movie">
-        <a href="https://www.youtube.com/watch?v=YOUR_TRAILER_LINK" target="_blank">
-            <img src="images/65.jpg" alt="65">
-        </a>
-        <div class="movie-title">65</div>
-    </div>
-
-    <!-- MOVIE 5 -->
-    <div class="movie">
-        <a href="https://www.youtube.com/watch?v=YOUR_TRAILER_LINK" target="_blank">
-            <img src="images/missing.jpg" alt="Missing">
-        </a>
-        <div class="movie-title">Missing</div>
-    </div>
-
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo">MovieFlix</div>
 </div>
+
+<!-- HERO -->
+<div class="hero">
+    <div class="hero-content">
+        <h1>Welcome to MovieFlix</h1>
+        <p>Watch the latest trending movies trailers now.</p>
+        <button>Watch Now</button>
+    </div>
+</div>
+
+<!-- TRENDING -->
+<div class="section">
+    <h2>Trending</h2>
+    <div class="row">
+
+        <!-- MOVIE 1 -->
+        <div class="movie">
+            <a href="https://www.youtube.com/watch?v=YOUR_LINK_1" target="_blank">
+                <img src="images/heart-of-stone.jpg">
+            </a>
+        </div>
+
+        <!-- MOVIE 2 -->
+        <div class="movie">
+            <a href="https://www.youtube.com/watch?v=YOUR_LINK_2" target="_blank">
+                <img src="images/bat-mitzvah.jpg">
+            </a>
+        </div>
+
+        <!-- MOVIE 3 -->
+        <div class="movie">
+            <a href="https://www.youtube.com/watch?v=YOUR_LINK_3" target="_blank">
+                <img src="images/living.jpg">
+            </a>
+        </div>
+
+        <!-- MOVIE 4 -->
+        <div class="movie">
+            <a href="https://www.youtube.com/watch?v=YOUR_LINK_4" target="_blank">
+                <img src="images/65.jpg">
+            </a>
+        </div>
+
+        <!-- MOVIE 5 -->
+        <div class="movie">
+            <a href="https://www.youtube.com/watch?v=YOUR_LINK_5" target="_blank">
+                <img src="images/missing.jpg">
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<!-- POPULAR -->
+<div class="section">
+    <h2>Popular</h2>
+    <div class="row">
+
+        <!-- You can reuse or change these -->
+
+        <div class="movie">
+            <a href="https://www.youtube.com/watch?v=YOUR_LINK_1" target="_blank">
+                <img src="images/heart-of-stone.jpg">
+            </a>
+        </div>
+
+        <div class="movie">
+            <a href="https://www.youtube.com/watch?v=YOUR_LINK_2" target="_blank">
+                <img src="images/bat-mitzvah.jpg">
+            </a>
+        </div>
+
+        <div class="movie">
+            <a href="https://www.youtube.com/watch?v=YOUR_LINK_3" target="_blank">
+                <img src="images/living.jpg">
+            </a>
+        </div>
+
+        <div class="movie">
+            <a href="https://www.youtube.com/watch?v=YOUR_LINK_4" target="_blank">
+                <img src="images/65.jpg">
+            </a>
+        </div>
+
+        <div class="movie">
+            <a href="https://www.youtube.com/watch?v=YOUR_LINK_5" target="_blank">
+                <img src="images/missing.jpg">
+            </a>
+        </div>
+
+    </div>
 </div>
 
 </body>
