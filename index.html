@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MovieFlix</title>
+<title>Vincent's MovieFlix</title>
 
 <style>
 * {
@@ -22,58 +22,74 @@ body {
 .navbar {
     position: fixed;
     width: 100%;
-    padding: 20px 50px;
+    padding: 15px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent);
     z-index: 1000;
 }
 
 .logo {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: bold;
     color: #e50914;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
-    margin-left: 20px;
     font-size: 14px;
+    transition: 0.3s;
 }
 
 .nav-links a:hover {
     color: #b3b3b3;
 }
 
-/* Hero Section */
+/* Hero */
 .hero {
     height: 90vh;
     background: url('https://images.unsplash.com/photo-1524985069026-dd778a71c7b4') center/cover no-repeat;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 50px;
+    align-items: center;
+    padding: 0 5%;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, #141414, transparent);
+}
+
+.hero-content {
+    position: relative;
+    max-width: 600px;
 }
 
 .hero h1 {
-    font-size: 60px;
-    margin-bottom: 20px;
+    font-size: 3rem;
+    margin-bottom: 15px;
 }
 
 .hero p {
-    max-width: 500px;
+    font-size: 1rem;
     margin-bottom: 20px;
-    font-size: 18px;
 }
 
 .hero-buttons button {
-    padding: 10px 25px;
+    padding: 10px 20px;
     margin-right: 10px;
     border: none;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
     border-radius: 4px;
 }
 
@@ -87,26 +103,20 @@ body {
     color: white;
 }
 
-.play-btn:hover {
-    background-color: #e6e6e6;
-}
-
-.info-btn:hover {
-    background-color: rgba(109,109,110,0.4);
-}
-
-/* Movie Rows */
+/* Rows */
 .row {
-    margin: 20px 50px;
+    margin: 30px 5%;
 }
 
 .row h2 {
     margin-bottom: 10px;
+    font-size: 1.3rem;
 }
 
 .row-posters {
     display: flex;
     overflow-x: auto;
+    gap: 10px;
     scroll-behavior: smooth;
 }
 
@@ -115,15 +125,14 @@ body {
 }
 
 .poster {
-    max-height: 160px;
-    margin-right: 10px;
+    height: 220px;
+    border-radius: 4px;
     transition: transform 0.3s;
     cursor: pointer;
-    border-radius: 4px;
 }
 
 .poster:hover {
-    transform: scale(1.1);
+    transform: scale(1.08);
 }
 
 /* Footer */
@@ -133,12 +142,63 @@ body {
     color: #757575;
     font-size: 14px;
 }
+
+/* ========================= */
+/* RESPONSIVE DESIGN */
+/* ========================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .poster {
+        height: 180px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 10px 5%;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        display: none; /* hide menu on small screens */
+    }
+
+    .hero {
+        height: 70vh;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .poster {
+        height: 150px;
+    }
+
+    .row h2 {
+        font-size: 1.1rem;
+    }
+}
+
 </style>
 </head>
 
 <body>
 
-<!-- Navbar -->
 <div class="navbar">
     <div class="logo">MovieFlix</div>
     <div class="nav-links">
@@ -149,51 +209,39 @@ body {
     </div>
 </div>
 
-<!-- Hero Section -->
 <div class="hero">
-    <h1>Featured Movie</h1>
-    <p>Watch the latest blockbuster movies and trending shows anytime, anywhere.</p>
-    <div class="hero-buttons">
-        <button class="play-btn">▶ Play</button>
-        <button class="info-btn">More Info</button>
+    <div class="hero-content">
+        <h1>Featured Movie</h1>
+        <p>Watch the latest blockbuster movies and trending shows anytime, anywhere.</p>
+        <div class="hero-buttons">
+            <button class="play-btn">▶ Play</button>
+            <button class="info-btn">More Info</button>
+        </div>
     </div>
 </div>
 
-<!-- Movie Rows -->
 <div class="row">
     <h2>Trending Now</h2>
     <div class="row-posters">
-        <img class="poster" src="https://via.placeholder.com/300x450" alt="">
-        <img class="poster" src="https://via.placeholder.com/300x450" alt="">
-        <img class="poster" src="https://via.placeholder.com/300x450" alt="">
-        <img class="poster" src="https://via.placeholder.com/300x450" alt="">
-        <img class="poster" src="https://via.placeholder.com/300x450" alt="">
+        <img class="poster" src="https://via.placeholder.com/300x450">
+        <img class="poster" src="https://via.placeholder.com/300x450">
+        <img class="poster" src="https://via.placeholder.com/300x450">
+        <img class="poster" src="https://via.placeholder.com/300x450">
+        <img class="poster" src="https://via.placeholder.com/300x450">
     </div>
 </div>
 
 <div class="row">
     <h2>Top Rated</h2>
     <div class="row-posters">
-        <img class="poster" src="https://via.placeholder.com/300x450" alt="">
-        <img class="poster" src="https://via.placeholder.com/300x450" alt="">
-        <img class="poster" src="https://via.placeholder.com/300x450" alt="">
-        <img class="poster" src="https://via.placeholder.com/300x450" alt="">
-        <img class="poster" src="https://via.placeholder.com/300x450" alt="">
+        <img class="poster" src="https://via.placeholder.com/300x450">
+        <img class="poster" src="https://via.placeholder.com/300x450">
+        <img class="poster" src="https://via.placeholder.com/300x450">
+        <img class="poster" src="https://via.placeholder.com/300x450">
+        <img class="poster" src="https://via.placeholder.com/300x450">
     </div>
 </div>
 
-<div class="row">
-    <h2>Action Movies</h2>
-    <div class="row-posters">
-        <img class="poster" src="https://via.placeholder.com/300x450" alt="">
-        <img class="poster" src="https://via.placeholder.com/300x450" alt="">
-        <img class="poster" src="https://via.placeholder.com/300x450" alt="">
-        <img class="poster" src="https://via.placeholder.com/300x450" alt="">
-        <img class="poster" src="https://via.placeholder.com/300x450" alt="">
-    </div>
-</div>
-
-<!-- Footer -->
 <div class="footer">
     © 2026 MovieFlix. All rights reserved.
 </div>
