@@ -1,311 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MovieFlix</title>
+<div class="container mt-5">
+    <h2 class="text-white mb-4">The 5 Best New Movies</h2>
 
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
-    background-color: #141414;
-    color: white;
-}
-
-/* ================= NAVBAR ================= */
-.navbar {
-    position: fixed;
-    width: 100%;
-    padding: 15px 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent);
-    z-index: 1000;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #e50914;
-}
-
-.nav-links {
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-    transition: 0.3s;
-}
-
-.nav-links a:hover {
-    color: #b3b3b3;
-}
-
-/* ================= HERO ================= */
-.hero {
-    position: relative;
-    height: 90vh;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    padding: 0 5%;
-}
-
-.bg-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-    z-index: -2;
-}
-
-.overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, #141414 10%, rgba(0,0,0,0.4));
-    z-index: -1;
-}
-
-.hero-content {
-    position: relative;
-    max-width: 600px;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 15px;
-}
-
-.hero p {
-    font-size: 1rem;
-    margin-bottom: 20px;
-}
-
-.hero-buttons button {
-    padding: 10px 20px;
-    margin-right: 10px;
-    border: none;
-    cursor: pointer;
-    font-size: 14px;
-    border-radius: 4px;
-}
-
-.play-btn {
-    background-color: white;
-    color: black;
-}
-
-.info-btn {
-    background-color: rgba(109,109,110,0.7);
-    color: white;
-}
-
-/* ================= MOVIE ROW ================= */
-.row {
-    margin: 30px 5%;
-}
-
-.row h2 {
-    margin-bottom: 15px;
-    font-size: 1.3rem;
-}
-
-.row-posters {
-    display: flex;
-    overflow-x: auto;
-    gap: 20px;
-    scroll-behavior: smooth;
-}
-
-.row-posters::-webkit-scrollbar {
-    display: none;
-}
-
-/* MOVIE CARD */
-.movie-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 180px;
-}
-
-.poster {
-    width: 180px;
-    height: 270px;
-    object-fit: cover;
-    border-radius: 6px;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
-
-.poster:hover {
-    transform: scale(1.08);
-}
-
-/* MOVIE LINKS */
-.movie-links {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    margin-top: 8px;
-    text-align: center;
-}
-
-.movie-links a {
-    font-size: 12px;
-    color: #b3b3b3;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.movie-links a:hover {
-    color: white;
-    text-decoration: underline;
-}
-
-/* ================= FOOTER ================= */
-.footer {
-    text-align: center;
-    padding: 30px;
-    color: #757575;
-    font-size: 14px;
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 600px) {
-    .poster {
-        width: 140px;
-        height: 210px;
-    }
-
-    .movie-card {
-        min-width: 140px;
-    }
-}
-</style>
-</head>
-
-<body>
-
-<!-- ================= NAVBAR ================= -->
-<div class="navbar">
-    <div class="logo">MovieFlix</div>
-    <div class="nav-links">
-        <a href="#">Home</a>
-        <a href="#">TV Shows</a>
-        <a href="#">Movies</a>
-        <a href="#">My List</a>
-    </div>
-</div>
-
-<!-- ================= HERO ================= -->
-<div class="hero">
-    <video autoplay muted loop playsinline class="bg-video">
-        <source src="video/trailer.mp4" type="video/mp4">
-    </video>
-
-    <div class="overlay"></div>
-
-    <div class="hero-content">
-        <h1>Featured Movie</h1>
-        <p>Watch the latest blockbuster movies and trending shows anytime, anywhere.</p>
-        <div class="hero-buttons">
-            <button class="play-btn">▶ Play</button>
-            <button class="info-btn">More Info</button>
-        </div>
-    </div>
-</div>
-
-<!-- ================= TOP 5 MOVIES ================= -->
-<div class="row">
-    <h2>The 5 Best New Movies</h2>
-
-    <div class="row-posters">
+    <div class="row">
 
         <!-- MOVIE 1 -->
-        <div class="movie-card">
-            <a href="#" target="_blank">
-                <img class="poster" src="images/Companion.jpg" alt="Movie 1">
-            </a>
-            <div class="movie-links">
-                <a href="https://www.hbomax.com/movies/companion/47556360-0bbf-4e3d-8d6d-53a0179e2153/" target="_blank">Watch on IMDb</a>
-                <a href="https://tv.apple.com/us/movie/companion/umc.cmc.4ucrwm6dvaf3z2e9alwmfyo2x/" target="_blank">Watch on Apple TV</a>
-                <a href="https://www.youtube.com/watch?v=Qr_kX0D3DNA/" target="_blank">Companion | Official Trailer</a>
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
+            <div class="card bg-dark text-white">
+                <img src="images/Companion.jpg" class="card-img-top" alt="Companion">
+                <div class="card-body">
+                    <h6 class="card-title">Companion</h6>
+                    <a href="https://www.hbomax.com/movies/companion/47556360-0bbf-4e3d-8d6d-53a0179e2153/" target="_blank" class="d-block text-light">Watch on HBO Max</a>
+                    <a href="https://tv.apple.com/us/movie/companion/" target="_blank" class="d-block text-light">Watch on Apple TV</a>
+                    <a href="https://www.youtube.com/watch?v=Qr_kX0D3DNA/" target="_blank" class="d-block text-light">Official Trailer</a>
+                </div>
             </div>
         </div>
 
         <!-- MOVIE 2 -->
-        <div class="movie-card">
-            <a href="#" target="_blank">
-                <img class="poster" src="images/snowwhite.jpg" alt="Movie 2">
-            </a>
-            <div class="movie-links">
-                <a href="https://tv.apple.com/us/movie/snow-white/umc.cmc.6u2jckaqzln7dp4mb403r4t3y/" target="_blank">Watch on Apple TV</a>
-                <a href="https://moviesanywhere.com/movie/snow-white-2025/" target="_blank">Watch on Movies Anywhere</a>
-                <a href="https://www.youtube.com/watch?v=iV46TJKL8cU/" target="_blank">Disney’s Snow White | Official Trailer</a>
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
+            <div class="card bg-dark text-white">
+                <img src="images/snowwhite.jpg" class="card-img-top" alt="Snow White">
+                <div class="card-body">
+                    <h6 class="card-title">Snow White</h6>
+                    <a href="#" target="_blank" class="d-block text-light">Watch on Apple TV</a>
+                    <a href="#" target="_blank" class="d-block text-light">Watch on Movies Anywhere</a>
+                    <a href="#" target="_blank" class="d-block text-light">Official Trailer</a>
+                </div>
             </div>
         </div>
 
-        <!-- MOVIE 3 -->
-        <div class="movie-card">
-            <a href="#" target="_blank">
-                <img class="poster" src="images/havoc.jpg" alt="Movie 3">
-            </a>
-            <div class="movie-links">
-                <a href="https://www.netflix.com/ph-en/title/81330790/" target="_blank">Watch on Netflix</a>
-                <a href="https://www.imdb.com/title/tt14123284/" target="_blank">See Info on IMDb</a>
-                <a href="https://www.youtube.com/watch?v=6txjTWLoSc8/" target="_blank">HAVOC | Official Trailer | Netflix</a>
-            </div>
-        </div>
-
-        <!-- MOVIE 4 -->
-        <div class="movie-card">
-            <a href="#" target="_blank">
-                <img class="poster" src="images/opus.jpg" alt="Movie 4">
-            </a>
-            <div class="movie-links">
-                <a href="https://tv.apple.com/us/movie/opus/umc.cmc.1ty1mv0jtz0saiuklc5didh4q/" target="_blank">Watch on Apple TV</a>
-                <a href="https://www.hbomax.com/movies/opus/1a5977b7-6df0-43aa-be50-2238c2536bc4/" target="_blank">Watch on HBO Max</a>
-                <a href="https://www.youtube.com/watch?v=5owo-kbx8X0/" target="_blank">Opus | Official Trailer HD | A24</a>
-            </div>
-        </div>
-
-        <!-- MOVIE 5 -->
-        <div class="movie-card">
-            <a href="#" target="_blank">
-                <img class="poster" src="images/roundthedecay.jpg" alt="Movie 5">
-            </a>
-            <div class="movie-links">
-                <a href="https://www.imdb.com/title/tt28104012/" target="_blank">Full Synopsis</a>
-                <a href="https://www.justwatch.com/us/movie/round-the-decay/" target="_blank">See More Info</a>
-                <a href="https://www.youtube.com/watch?v=9AVuAb22WPk/" target="_blank">Round The Decay - Official Trailer</a>
-            </div>
-        </div>
+        <!-- Repeat same structure for Movie 3, 4, 5 -->
 
     </div>
 </div>
-
-<!-- ================= FOOTER ================= -->
-<div class="footer">
-    © 2026 MovieFlix. All rights reserved.
-</div>
-
-</body>
-</html>
-
-
-
