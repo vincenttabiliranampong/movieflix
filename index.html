@@ -52,7 +52,7 @@ body {
     color: #b3b3b3;
 }
 
-/* ================= HERO WITH VIDEO ================= */
+/* ================= HERO ================= */
 .hero {
     position: relative;
     height: 90vh;
@@ -114,20 +114,20 @@ body {
     color: white;
 }
 
-/* ================= MOVIE ROWS ================= */
+/* ================= MOVIE ROW ================= */
 .row {
     margin: 30px 5%;
 }
 
 .row h2 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     font-size: 1.3rem;
 }
 
 .row-posters {
     display: flex;
     overflow-x: auto;
-    gap: 10px;
+    gap: 20px;
     scroll-behavior: smooth;
 }
 
@@ -135,10 +135,18 @@ body {
     display: none;
 }
 
+/* MOVIE CARD */
+.movie-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 180px;
+}
+
 .poster {
-    width: 180px;          
-    height: 270px;        
-    object-fit: cover;     
+    width: 180px;
+    height: 270px;
+    object-fit: cover;
     border-radius: 6px;
     transition: transform 0.3s ease;
     cursor: pointer;
@@ -146,6 +154,27 @@ body {
 
 .poster:hover {
     transform: scale(1.08);
+}
+
+/* MOVIE LINKS */
+.movie-links {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 8px;
+    text-align: center;
+}
+
+.movie-links a {
+    font-size: 12px;
+    color: #b3b3b3;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.movie-links a:hover {
+    color: white;
+    text-decoration: underline;
 }
 
 /* ================= FOOTER ================= */
@@ -157,48 +186,14 @@ body {
 }
 
 /* ================= RESPONSIVE ================= */
-@media (max-width: 992px) {
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-
-    .poster {
-        height: 180px;
-    }
-}
-
 @media (max-width: 600px) {
-
-    .navbar {
-        padding: 10px 5%;
-    }
-
-    .logo {
-        font-size: 20px;
-    }
-
-    .nav-links {
-        display: none;
-    }
-
-    .hero {
-        height: 70vh;
-    }
-
-    .hero h1 {
-        font-size: 1.8rem;
-    }
-
-    .hero p {
-        font-size: 0.9rem;
-    }
-
     .poster {
-        height: 150px;
+        width: 140px;
+        height: 210px;
     }
 
-    .row h2 {
-        font-size: 1.1rem;
+    .movie-card {
+        min-width: 140px;
     }
 }
 </style>
@@ -217,7 +212,7 @@ body {
     </div>
 </div>
 
-<!-- ================= HERO SECTION WITH VIDEO ================= -->
+<!-- ================= HERO ================= -->
 <div class="hero">
     <video autoplay muted loop playsinline class="bg-video">
         <source src="video/trailer.mp4" type="video/mp4">
@@ -235,39 +230,75 @@ body {
     </div>
 </div>
 
-<!-- ================= MOVIE ROWS ================= -->
+<!-- ================= TOP 5 MOVIES ================= -->
 <div class="row">
     <h2>The 5 Best New Movies</h2>
 
     <div class="row-posters">
 
         <!-- MOVIE 1 -->
-        <a href="https://www.hbomax.com/ph/en/movies/companion/47556360-0bbf-4e3d-8d6d-53a0179e2153" target="_blank">
-            <img class="poster" src="images/Companion.jpg" alt="Watch it on HBO Max ">
-        </a>
+        <div class="movie-card">
+            <a href="#" target="_blank">
+                <img class="poster" src="images/Companion.jpg" alt="Movie 1">
+            </a>
+            <div class="movie-links">
+                <a href="#">Full Synopsis</a>
+                <a href="#">Cast & Crew</a>
+                <a href="#">Watch Trailer</a>
+            </div>
+        </div>
 
         <!-- MOVIE 2 -->
-        <a href="https://www.imdb.com/title/tt6208148/" target="_blank">
-            <img class="poster" src="images/snowwhite.jpg" alt="Watch it on IMDb">
-        </a>
+        <div class="movie-card">
+            <a href="#" target="_blank">
+                <img class="poster" src="images/snowwhite.jpg" alt="Movie 2">
+            </a>
+            <div class="movie-links">
+                <a href="#">Full Synopsis</a>
+                <a href="#">Cast & Crew</a>
+                <a href="#">Watch Trailer</a>
+            </div>
+        </div>
 
         <!-- MOVIE 3 -->
-        <a href="https://www.netflix.com/ph-en/title/81330790" target="_blank">
-            <img class="poster" src="images/havoc.jpg" alt="Watch it on NETFLIX">
-        </a>
+        <div class="movie-card">
+            <a href="#" target="_blank">
+                <img class="poster" src="images/havoc.jpg" alt="Movie 3">
+            </a>
+            <div class="movie-links">
+                <a href="#">Full Synopsis</a>
+                <a href="#">Cast & Crew</a>
+                <a href="#">Watch Trailer</a>
+            </div>
+        </div>
 
         <!-- MOVIE 4 -->
-        <a href="https://www.hbomax.com/movies/opus/1a5977b7-6df0-43aa-be50-2238c2536bc4" target="_blank">
-            <img class="poster" src="images/opus.jpg" alt="Watch it on HBO Max">
-        </a>
+        <div class="movie-card">
+            <a href="#" target="_blank">
+                <img class="poster" src="images/opus.jpg" alt="Movie 4">
+            </a>
+            <div class="movie-links">
+                <a href="#">Full Synopsis</a>
+                <a href="#">Cast & Crew</a>
+                <a href="#">Watch Trailer</a>
+            </div>
+        </div>
 
         <!-- MOVIE 5 -->
-        <a href="https://www.justwatch.com/us/movie/round-the-decay" target="_blank">
-            <img class="poster" src="images/roundthedecay.jpg" alt="Watch it on JustWatch">
-        </a>
+        <div class="movie-card">
+            <a href="#" target="_blank">
+                <img class="poster" src="images/roundthedecay.jpg" alt="Movie 5">
+            </a>
+            <div class="movie-links">
+                <a href="#">Full Synopsis</a>
+                <a href="#">Cast & Crew</a>
+                <a href="#">Watch Trailer</a>
+            </div>
+        </div>
 
     </div>
 </div>
+
 <!-- ================= FOOTER ================= -->
 <div class="footer">
     © 2026 MovieFlix. All rights reserved.
@@ -275,10 +306,3 @@ body {
 
 </body>
 </html>
-
-
-
-
-
-
-
