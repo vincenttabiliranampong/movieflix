@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MovieFlix - Bootstrap Version</title>
+    <title>MovieFlix - Responsive Version</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap 4 CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-    <!-- Font Awesome (YouTube Icon) -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <style>
@@ -31,6 +31,43 @@
         footer {
             background-color: #343a40;
             color: white;
+        }
+
+        /* Make all posters same height */
+        .card-img-top {
+            height: 400px;
+            object-fit: cover;
+        }
+
+        /* ===== CUSTOM RESPONSIVE LAYOUT ===== */
+
+        .movie-col {
+            width: 100%;
+            padding: 0 15px;
+            margin-bottom: 30px;
+        }
+
+        /* 601px – 900px → 2 columns */
+        @media (min-width: 601px) and (max-width: 900px) {
+            .movie-col {
+                width: 50%;
+                float: left;
+            }
+        }
+
+        /* >900px → 3 columns */
+        @media (min-width: 901px) {
+            .movie-col {
+                width: 33.3333%;
+                float: left;
+            }
+        }
+
+        /* Clear floats */
+        .movie-row::after {
+            content: "";
+            display: table;
+            clear: both;
         }
     </style>
 </head>
@@ -60,19 +97,19 @@
 <div class="container mt-5">
     <h2 class="text-center mb-4">The 5 Best New Movies</h2>
 
-    <div class="row">
+    <div class="movie-row">
 
         <!-- MOVIE 1 -->
-        <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="movie-col">
             <div class="card">
                 <img src="images/Companion.jpg" class="card-img-top" alt="Companion">
                 <div class="card-body">
                     <div class="movie-title">Companion</div>
                     <div class="movie-links">
-                        <a href="https://www.hbomax.com/movies/companion/47556360-0bbf-4e3d-8d6d-53a0179e2153/" target="_blank">Watch on HBO Max</a>
-                        <a href="https://tv.apple.com/us/movie/companion/" target="_blank">Watch on Apple TV</a>
-                        <a href="https://www.youtube.com/watch?v=Qr_kX0D3DNA/" target="_blank">
-                            <i class="fab fa-youtube text-danger mr-1"></i>Companion | Official Trailer
+                        <a href="#" target="_blank">Watch on HBO Max</a>
+                        <a href="#" target="_blank">Watch on Apple TV</a>
+                        <a href="#" target="_blank">
+                            <i class="fab fa-youtube text-danger mr-1"></i>Official Trailer
                         </a>
                     </div>
                 </div>
@@ -80,16 +117,16 @@
         </div>
 
         <!-- MOVIE 2 -->
-        <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="movie-col">
             <div class="card">
                 <img src="images/snowwhite.jpg" class="card-img-top" alt="Snow White">
                 <div class="card-body">
                     <div class="movie-title">Snow White</div>
                     <div class="movie-links">
-                        <a href="https://tv.apple.com/us/movie/snow-white/" target="_blank">Watch on Apple TV</a>
-                        <a href="https://moviesanywhere.com/movie/snow-white-2025/" target="_blank">Watch on Movies Anywhere</a>
-                        <a href="https://www.youtube.com/watch?v=iV46TJKL8cU/" target="_blank">
-                            <i class="fab fa-youtube text-danger mr-1"></i>Disney’s Snow White | Official Trailer | In Theaters March 21
+                        <a href="#" target="_blank">Watch on Apple TV</a>
+                        <a href="#" target="_blank">Watch on Movies Anywhere</a>
+                        <a href="#" target="_blank">
+                            <i class="fab fa-youtube text-danger mr-1"></i>Official Trailer
                         </a>
                     </div>
                 </div>
@@ -97,16 +134,16 @@
         </div>
 
         <!-- MOVIE 3 -->
-        <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="movie-col">
             <div class="card">
                 <img src="images/havoc.jpg" class="card-img-top" alt="Havoc">
                 <div class="card-body">
                     <div class="movie-title">Havoc</div>
                     <div class="movie-links">
-                        <a href="https://www.netflix.com/ph-en/title/81330790/" target="_blank">Watch on Netflix</a>
-                        <a href="https://www.imdb.com/title/tt14123284/" target="_blank">See Info on IMDb</a>
-                        <a href="https://www.youtube.com/watch?v=6txjTWLoSc8/" target="_blank">
-                            <i class="fab fa-youtube text-danger mr-1"></i>HAVOC | Official Trailer | Netflix
+                        <a href="#" target="_blank">Watch on Netflix</a>
+                        <a href="#" target="_blank">See Info on IMDb</a>
+                        <a href="#" target="_blank">
+                            <i class="fab fa-youtube text-danger mr-1"></i>Official Trailer
                         </a>
                     </div>
                 </div>
@@ -114,16 +151,16 @@
         </div>
 
         <!-- MOVIE 4 -->
-        <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="movie-col">
             <div class="card">
                 <img src="images/opus.jpg" class="card-img-top" alt="Opus">
                 <div class="card-body">
                     <div class="movie-title">Opus</div>
                     <div class="movie-links">
-                        <a href="https://tv.apple.com/us/movie/opus/" target="_blank">Watch on Apple TV</a>
-                        <a href="https://www.hbomax.com/movies/opus/" target="_blank">Watch on HBO Max</a>
-                        <a href="https://www.youtube.com/watch?v=5owo-kbx8X0/" target="_blank">
-                            <i class="fab fa-youtube text-danger mr-1"></i>Opus | Official Trailer HD | A24
+                        <a href="#" target="_blank">Watch on Apple TV</a>
+                        <a href="#" target="_blank">Watch on HBO Max</a>
+                        <a href="#" target="_blank">
+                            <i class="fab fa-youtube text-danger mr-1"></i>Official Trailer
                         </a>
                     </div>
                 </div>
@@ -131,16 +168,16 @@
         </div>
 
         <!-- MOVIE 5 -->
-        <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="movie-col">
             <div class="card">
                 <img src="images/roundthedecay.jpg" class="card-img-top" alt="Round The Decay">
                 <div class="card-body">
                     <div class="movie-title">Round The Decay</div>
                     <div class="movie-links">
-                        <a href="https://www.imdb.com/title/tt28104012/" target="_blank">Full Synopsis</a>
-                        <a href="https://www.justwatch.com/us/movie/round-the-decay/" target="_blank">See More Info</a>
-                        <a href="https://www.youtube.com/watch?v=9AVuAb22WPk/" target="_blank">
-                            <i class="fab fa-youtube text-danger mr-1"></i>Round The Decay - Official Trailer
+                        <a href="#" target="_blank">Full Synopsis</a>
+                        <a href="#" target="_blank">See More Info</a>
+                        <a href="#" target="_blank">
+                            <i class="fab fa-youtube text-danger mr-1"></i>Official Trailer
                         </a>
                     </div>
                 </div>
@@ -155,10 +192,9 @@
     © 2026 MovieFlix. All rights reserved.
 </footer>
 
-<!-- Bootstrap 4 JS -->
+<!-- Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
-
