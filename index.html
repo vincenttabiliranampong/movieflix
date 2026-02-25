@@ -1,35 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MovieFlix - Bootstrap Version</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap 4 CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .movie-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        .movie-links a {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">MovieFlix</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">TV Shows</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Movies</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">My List</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ================= MOVIE SECTION ================= -->
 <div class="container mt-5">
-    <h2 class="text-white mb-4">The 5 Best New Movies</h2>
+    <h2 class="text-center mb-4">The 5 Best New Movies</h2>
 
     <div class="row">
 
         <!-- MOVIE 1 -->
-        <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
-            <div class="card bg-dark text-white">
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card">
                 <img src="images/Companion.jpg" class="card-img-top" alt="Companion">
                 <div class="card-body">
-                    <h6 class="card-title">Companion</h6>
-                    <a href="https://www.hbomax.com/movies/companion/47556360-0bbf-4e3d-8d6d-53a0179e2153/" target="_blank" class="d-block text-light">Watch on HBO Max</a>
-                    <a href="https://tv.apple.com/us/movie/companion/" target="_blank" class="d-block text-light">Watch on Apple TV</a>
-                    <a href="https://www.youtube.com/watch?v=Qr_kX0D3DNA/" target="_blank" class="d-block text-light">Official Trailer</a>
+                    <div class="movie-title">Companion</div>
+                    <div class="movie-links">
+                        <a href="https://www.hbomax.com/movies/companion/47556360-0bbf-4e3d-8d6d-53a0179e2153/" target="_blank">Watch on HBO Max</a>
+                        <a href="https://tv.apple.com/us/movie/companion/" target="_blank">Watch on Apple TV</a>
+                        <a href="https://www.youtube.com/watch?v=Qr_kX0D3DNA/" target="_blank">Official Trailer</a>
+                    </div>
                 </div>
             </div>
         </div>
 
         <!-- MOVIE 2 -->
-        <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
-            <div class="card bg-dark text-white">
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card">
                 <img src="images/snowwhite.jpg" class="card-img-top" alt="Snow White">
                 <div class="card-body">
-                    <h6 class="card-title">Snow White</h6>
-                    <a href="#" target="_blank" class="d-block text-light">Watch on Apple TV</a>
-                    <a href="#" target="_blank" class="d-block text-light">Watch on Movies Anywhere</a>
-                    <a href="#" target="_blank" class="d-block text-light">Official Trailer</a>
+                    <div class="movie-title">Snow White</div>
+                    <div class="movie-links">
+                        <a href="https://tv.apple.com/us/movie/snow-white/" target="_blank">Watch on Apple TV</a>
+                        <a href="https://moviesanywhere.com/movie/snow-white-2025/" target="_blank">Watch on Movies Anywhere</a>
+                        <a href="https://www.youtube.com/watch?v=iV46TJKL8cU/" target="_blank">Official Trailer</a>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Repeat same structure for Movie 3, 4, 5 -->
+        <!-- MOVIE 3 -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card">
+                <img src="images/havoc.jpg" class="card-img-top" alt="Havoc">
+                <div class="card-body">
+                    <div class="movie-title">Havoc</div>
+                    <div class="movie-links">
+                        <a href="https://www.netflix.com/ph-en/title/81330790/" target="_blank">Watch on Netflix</a>
+                        <a href="https://www.imdb.com/title/tt14123284/" target="_blank">See Info on IMDb</a>
+                        <a href="https://www.youtube.com/watch?v=6txjTWLoSc8/" target="_blank">Official Trailer</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MOVIE 4 -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card">
+                <img src="images/opus.jpg" class="card-img-top" alt="Opus">
+                <div class="card-body">
+                    <div class="movie-title">Opus</div>
+                    <div class="movie-links">
+                        <a href="https://tv.apple.com/us/movie/opus/" target="_blank">Watch on Apple TV</a>
+                        <a href="https://www.hbomax.com/movies/opus/" target="_blank">Watch on HBO Max</a>
+                        <a href="https://www.youtube.com/watch?v=5owo-kbx8X0/" target="_blank">Official Trailer</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MOVIE 5 -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card">
+                <img src="images/roundthedecay.jpg" class="card-img-top" alt="Round The Decay">
+                <div class="card-body">
+                    <div class="movie-title">Round The Decay</div>
+                    <div class="movie-links">
+                        <a href="https://www.imdb.com/title/tt28104012/" target="_blank">Full Synopsis</a>
+                        <a href="https://www.justwatch.com/us/movie/round-the-decay/" target="_blank">See More Info</a>
+                        <a href="https://www.youtube.com/watch?v=9AVuAb22WPk/" target="_blank">Official Trailer</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
 </div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="text-center py-4 mt-5">
+    © 2026 MovieFlix. All rights reserved.
+</footer>
+
+<!-- Bootstrap 4 JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
