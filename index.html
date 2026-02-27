@@ -14,54 +14,54 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #141414;
-    color: white;
+    background-color: white;   /* changed to white */
+    color: black;              /* changed text to black */
 }
 
 header {
-    background-color: #000;
     padding: 20px;
     text-align: center;
-    font-size: 28px;
+    font-size: 26px;
     font-weight: bold;
 }
 
 .container {
     display: grid;
-    gap: 20px;
-    padding: 20px;
+    gap: 40px;
+    padding: 20px 40px;
 }
 
+/* Movie card layout simplified */
 .movie-card {
-    background-color: #1f1f1f;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
+    text-align: center;
 }
 
-.movie-card:hover {
-    transform: scale(1.05);
-}
-
+/* Remove dark styling */
 .movie-card img {
-    width: 100%;
-    height: 400px;
+    width: 180px;
+    height: 270px;
     object-fit: cover;
+    margin-bottom: 10px;
 }
 
 .movie-info {
-    padding: 15px;
+    padding: 5px;
 }
 
 .movie-title {
-    font-size: 20px;
+    font-size: 16px;
     margin-bottom: 8px;
     font-weight: bold;
 }
 
-.movie-description {
-    font-size: 14px;
-    color: #cccccc;
+/* Link style like simple webpage */
+.movie-links a {
+    display: block;
+    font-size: 13px;
+    color: blue;
+    text-decoration: underline;
+    margin-bottom: 3px;
+    word-break: break-all;
 }
 
 /* >900px (Desktop) */
@@ -96,6 +96,8 @@ header {
 
 <div class="container">
 
+    <!-- YOUR ORIGINAL MOVIE CONTENT REMAINS UNCHANGED -->
+    
     <!-- MOVIE 1 -->
     <div class="movie-card">
         <img src="images/Companion.jpg" alt="Companion">
@@ -165,4 +167,3 @@ header {
 
 </body>
 </html>
-
